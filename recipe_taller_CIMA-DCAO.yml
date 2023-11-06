@@ -1,0 +1,465 @@
+# ESMValTool
+
+# See https://docs.esmvaltool.org/projects/esmvalcore/en/latest/recipe/overview.html
+# for a description of the recipe format.
+---
+documentation:
+  description: |
+    Example recipe that plots a map and timeseries of temperature.
+
+  title: Recipe that runs an example diagnostic written in Python.
+
+  authors:
+    - cos_josep
+
+  maintainer:
+    - cos_josep
+
+datasets:
+- dataset: GISS-E2-1-G
+  ensemble: r1i1p1f2
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: GISS-E2-1-G
+  ensemble: r1i1p5f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: GISS-E2-1-G
+  ensemble: r1i1p3f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: GISS-E2-1-H
+  ensemble: r1i1p1f2
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: GISS-E2-1-H
+  ensemble: r1i1p3f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: MCM-UA-1-0
+  ensemble: r1i1p1f2
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: CNRM-ESM2-1
+  ensemble: r1i1p1f2
+  exp:
+  - historical
+  - ssp585
+  grid: gr
+  mip: Amon
+  project: CMIP6
+- dataset: CNRM-CM6-1
+  ensemble: r1i1p1f2
+  exp:
+  - historical
+  - ssp585
+  grid: gr
+  mip: Amon
+  project: CMIP6
+- dataset: IPSL-CM6A-LR
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gr
+  mip: Amon
+  project: CMIP6
+- dataset: ACCESS-CM2
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: CESM2-WACCM
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: CAMS-CSM1-0
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: IITM-ESM
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: CMCC-ESM2
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: CMCC-CM2-SR5
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: TaiESM1
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: FIO-ESM-2-0
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: MPI-ESM1-2-HR
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: MPI-ESM1-2-LR
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: CAS-ESM2-0
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: INM-CM5-0
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gr1
+  mip: Amon
+  project: CMIP6
+- dataset: INM-CM4-8
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gr1
+  mip: Amon
+  project: CMIP6
+- dataset: MRI-ESM2-0
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: MRI-ESM2-0
+  ensemble: r1i2p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: NorESM2-LM
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: NorESM2-MM
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: ACCESS-ESM1-5
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: BCC-CSM2-MR
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: CanESM5
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: CanESM5
+  ensemble: r1i1p2f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: EC-Earth3
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gr
+  mip: Amon
+  project: CMIP6
+- dataset: HadGEM3-GC31-LL
+  ensemble: r1i1p1f3
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: UKESM1-0-LL
+  ensemble: r1i1p1f2
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: HadGEM3-GC31-MM
+  ensemble: r1i1p1f3
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: KACE-1-0-G
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gr
+  mip: Amon
+  project: CMIP6
+- dataset: MIROC-ES2L
+  ensemble: r1i1p1f2
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+- dataset: MIROC6
+  ensemble: r1i1p1f1
+  exp:
+  - historical
+  - ssp585
+  grid: gn
+  mip: Amon
+  project: CMIP6
+
+
+preprocessors:
+  # See https://docs.esmvaltool.org/projects/esmvalcore/en/latest/recipe/preprocessor.html
+  # for a description of the preprocessor functions.
+
+  djf_clim_global: &djf_clim_global_preproc
+    convert_units: # docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/api/esmvalcore.preprocessor.html#esmvalcore.preprocessor.convert_units
+      units: degrees_C
+    regrid: # docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/api/esmvalcore.preprocessor.html#esmvalcore.preprocessor.regrid 
+      target_grid: 1.5x1.5
+      scheme:
+        reference: esmf_regrid.schemes:ESMFBilinear
+        use_src_mask: True  
+    extract_season: # docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/api/esmvalcore.preprocessor.html#esmvalcore.preprocessor.extract_season
+      season: djf
+    climate_statistics: # docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/api/esmvalcore.preprocessor.html#esmvalcore.preprocessor.climate_statistics
+      operator: mean
+      seasons: ["DJF"]
+    multi_model_statistics: # docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/api/esmvalcore.preprocessor.html#esmvalcore.preprocessor.multi_model_statistics
+      statistics:
+        - mean
+      span: overlap
+      keep_input_datasets: False
+      ignore_scalar_coords: True
+    
+    
+  djf_clim_regional:
+    <<: *djf_clim_global_preproc # anchor
+    extract_shape: # docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/api/esmvalcore.preprocessor.html#esmvalcore.preprocessor.extract_shape
+      shapefile: ar6
+      method: contains
+      crop: true
+      decomposed: False
+      ids: # list of ar6 ids: https://github.com/SantanderMetGroup/ATLAS/blob/main/reference-regions/reference_regions_names.png
+        - S.E.South-America
+        - S.W.South-America
+        - S.South-America
+    # extract_region:
+    #   start_longitude: 300
+    #   end_longitude: 250
+    #   start_latitude: -60
+    #   end_latitude: 0
+
+
+  djf_mean_global: &djf_mean_global_preprocessor
+    extract_season:
+      season: djf
+    seasonal_statistics: # docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/api/esmvalcore.preprocessor.html#esmvalcore.preprocessor.seasonal_statistics
+      operator: mean
+      seasons: ["DJF"]
+    area_statistics: # docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/api/esmvalcore.preprocessor.html#esmvalcore.preprocessor.area_statistics
+      operator: mean
+    anomalies: # docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/api/esmvalcore.preprocessor.html#esmvalcore.preprocessor.anomalies
+      period: seasonal
+      reference: 
+        start_year: 2001
+        start_month: 1
+        start_day: 1
+        end_year: 2030
+        end_month: 12
+        end_day: 31
+    multi_model_statistics:
+      statistics:
+        - mean
+      span: overlap
+    
+
+  djf_mean_regional:
+    <<: *djf_mean_global_preprocessor 
+    extract_shape: 
+      shapefile: ar6
+      method: contains
+      crop: true
+      decomposed: False
+      ids: # list of ar6 ids: https://github.com/SantanderMetGroup/ATLAS/blob/main/reference-regions/reference_regions_names.png
+        - S.E.South-America
+        - S.W.South-America
+        - S.South-America
+
+diagnostics:
+  global_vs_regional:
+    description: Global and regional timeseries and climatology field of temperature 
+    variables:
+      tas_clim_global:
+        short_name: tas
+        mip: Amon
+        preprocessor: djf_clim_global
+        timerange: 2001/2030 # timerange docu: https://docs.esmvaltool.org/projects/ESMValCore/en/latest/recipe/overview.html#time-ranges
+        caption: | # python syntax
+          Global map of {title} in period 2001-2030.  
+        savefig: tas_clim_global.png
+      tas_clim_regional:
+        short_name: tas
+        mip: Amon
+        preprocessor: djf_clim_regional
+        timerange: 2001/2030 
+        caption: |
+          Regional map of {title} in period 2001-2030.
+        savefig: tas_clim_regional.png
+      tas_mean_global:
+        short_name: tas
+        mip: Amon
+        preprocessor: djf_mean_global
+        timerange: 2001/2060
+        caption: |
+          {title}; climatology 2001-2030.
+        savefig: tas_mean_global.png
+      tas_mean_regional:
+        short_name: tas
+        mip: Amon
+        preprocessor: djf_mean_regional
+        timerange: 2001/2060
+        caption: |
+          {title} regional mean containing: SES, SWS, SSA; climatology 2001-2030. 
+        savefig: tas_mean_regional.png
+
+      
+    scripts:
+      script1:
+        script: /home/josep.cos/examples/esmval_diagnostic.py
+        cmap: Reds
+      # script2:
+      #   script: *.R ?
+
+  # biases:
+  #   description: Annual mean temperature in Amsterdam and global mean since 1850.
+  #   themes:
+  #     - phys
+  #   realms:
+  #     - atmos
+  #   variables:
+  #     tas_amsterdam:
+  #       short_name: tas
+  #       mip: Amon
+  #       preprocessor: annual_mean_amsterdam
+  #       timerange: 1850/2000
+  #       caption: Annual mean {long_name} in Amsterdam according to {dataset}.
+  #     tas_global:
+  #       short_name: tas
+  #       mip: Amon
+  #       preprocessor: annual_mean_global
+  #       timerange: 1850/2000
+  #       caption: Annual global mean {long_name} according to {dataset}.
+  #       additional_datasets:
+  #         ERA5
+  #   scripts:
+  #     script1:
+  #       script: examples/diagnostic.py
+  #       quickplot:
+  #         plot_type: plot
