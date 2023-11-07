@@ -97,8 +97,9 @@ profile_diagnostic: false
 # more examples, see below. Comment out these when using a site-specific path.
 rootpath:
   CMIP5: /shera/datos/CMIP/CMIP5/output1
-  CMIP6: [/shera/datos/CMIP/CMIP6, /home/pepcos/CMIP6]
-  OBS: ~/
+  CMIP6: [/shera/datos/CMIP/CMIP6, /home/pepcos/climate_data/CMIP6]
+  OBS: home/pepcos/rawobs
+  RAWOBS: /home/pepcos/climate_data/rawobs
   default: ~/climate_data
 
 # Directory structure for input data --- [default]/ESGF/BADC/DKRZ/ETHZ/etc.
