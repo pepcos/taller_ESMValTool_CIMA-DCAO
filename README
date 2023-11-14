@@ -9,3 +9,9 @@ https://github.com/ESMValGroup
 
 Galería:
 https://docs.esmvaltool.org/en/latest/gallery.html 
+
+Mamba install:
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
+
+Activación ESMValTool DCAO:
+source activate /home/pepcos/envs/esmvaltool
