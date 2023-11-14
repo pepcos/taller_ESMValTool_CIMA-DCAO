@@ -91,6 +91,6 @@ diagnostics:
       
     scripts:
       script1:
-        script: /home/josep.cos/taller_esmvaltool_CIMA-DCAO/esmval_diagnostic.py
+        script: /home/<user>/taller_ESMValTool_CIMA-DCAO/como_no_escribir_un_diagnostico.py
         cmap: Reds
     

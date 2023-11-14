@@ -6,6 +6,7 @@ from pprint import pformat
 import matplotlib.pyplot as plt
 import iris.quickplot as qplt
 import iris.plot as iplt
+import numpy as np
 
 import iris
 
@@ -31,7 +32,11 @@ def plot_diagnostic(groups, cfg):
             qplt.pcolormesh(cube, cmap=cfg["cmap"])
             plt.gca().coastlines()
         elif dims == 1:
-            time_coord = [i.year for i in cube.coord("time").units.num2date(cube.coord("time").points)]
+            dim_name = [i.long_name for i in cube.coords()]
+            if "month_number" in dim_name:
+                time_coord = np.arange(1,13)
+            else:
+                time_coord = [i.year for i in cube.coord("time").units.num2date(cube.coord("time").points)]
             if attributes['dataset'] == "MultiModelMean":
                 plt.plot(time_coord, cube.data, color="black")
             else:

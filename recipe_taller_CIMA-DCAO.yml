@@ -432,34 +432,6 @@ diagnostics:
       
     scripts:
       script1:
-        script: /home/josep.cos/examples/esmval_diagnostic.py
+        script: /home/<user>/taller_ESMValTool_CIMA-DCAO/esmval_diagnostic.py
         cmap: Reds
-      # script2:
-      #   script: *.R ?
-
-  # biases:
-  #   description: Annual mean temperature in Amsterdam and global mean since 1850.
-  #   themes:
-  #     - phys
-  #   realms:
-  #     - atmos
-  #   variables:
-  #     tas_amsterdam:
-  #       short_name: tas
-  #       mip: Amon
-  #       preprocessor: annual_mean_amsterdam
-  #       timerange: 1850/2000
-  #       caption: Annual mean {long_name} in Amsterdam according to {dataset}.
-  #     tas_global:
-  #       short_name: tas
-  #       mip: Amon
-  #       preprocessor: annual_mean_global
-  #       timerange: 1850/2000
-  #       caption: Annual global mean {long_name} according to {dataset}.
-  #       additional_datasets:
-  #         ERA5
-  #   scripts:
-  #     script1:
-  #       script: examples/diagnostic.py
-  #       quickplot:
-  #         plot_type: plot
+      
