@@ -90,8 +90,9 @@ diagnostics:
         savefig: tas_mean_global.png
       
     scripts:
-      script1:
+      script_example_py:
         script: /home/<usuario>/taller_ESMValTool_CIMA-DCAO/esmval_diagnostic.py
-        # script: /home/<usuario>/taller_ESMValTool_CIMA-DCAO/esmval_diagnostic.R
-        cmap: Reds
+        var1: var1
+      script_example_R:
+        script: /home/<usuario>/taller_ESMValTool_CIMA-DCAO/esmval_diagnostic.R
     
