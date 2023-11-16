@@ -13,8 +13,6 @@ import iris
 from esmvaltool.diag_scripts.shared import (
     group_metadata,
     run_diagnostic,
-    select_metadata,
-    sorted_metadata,
 )
 
 logger = logging.getLogger(Path(__file__).stem)
@@ -40,7 +38,7 @@ def plot_diagnostic(groups, cfg):
             if attributes['dataset'] == "MultiModelMean":
                 plt.plot(time_coord, cube.data, color="black")
             else:
-                plt.plot(time_coord, cube.data, alpha=0.3, color="grey")
+                plt.plot(time_coord, cube.data, alpha=0.5)
 
     title = cube.long_name
     plt.ylabel(f"{cube.standard_name} / degC")
@@ -53,27 +51,14 @@ def main(cfg):
     # Get a description of the preprocessed data that we will use as input.
     input_data = cfg['input_data'].values()
 
-    # Demonstrate use of metadata access convenience functions.
-    selection = select_metadata(input_data, short_name='tas', dataset='MultiModelMean')
-    logger.info("Example of how to select only MultiModelMean temperature data:\n%s",
-                pformat(selection))
-
-    selection = sorted_metadata(selection, sort='dataset')
-    logger.info("Example of how to sort this selection by dataset:\n%s",
-                pformat(selection))
-
     grouped_input_data = group_metadata(input_data,
-                                        'variable_group',
-                                        sort='dataset')
+                                        'variable_group')
     logger.info(
         "Example of how to group and sort input data by variable groups from "
         "the recipe:\n%s", pformat(grouped_input_data))
-
-    # Example of how to loop over variables/datasets in alphabetical order
-    groups = group_metadata(input_data, 'variable_group', sort='dataset')
-    for group_name in groups:
+    for group_name in grouped_input_data:
         logger.info("Processing variable %s", group_name)
-        plot_diagnostic(groups[group_name], cfg)
+        plot_diagnostic(grouped_input_data[group_name], cfg)
 
 
 if __name__ == '__main__':

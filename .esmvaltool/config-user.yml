@@ -98,7 +98,7 @@ profile_diagnostic: false
 rootpath:
   CMIP5: /shera/datos/CMIP/CMIP5/output1
   CMIP6: [/shera/datos/CMIP/CMIP6, /datos/CMIP/CMIP6]
-  OBS: home/pepcos/rawobs
+  OBS: /datos/obs
   RAWOBS: /home/pepcos/climate_data/rawobs
   default: ~/climate_data
 

@@ -26,16 +26,6 @@
 #   cmor_path: ~/my/own/custom_tables
 ###############################################################################
 ---
-CMOR_OBS:
-  input_dir:
-      default: '{tier}/{dataset.upper}'
-      BSC: 'Tier{tier}/{dataset.upper}'
-  input_file:
-      # BSC: '{short_name}_*.nc'
-      BSC: 'OBS_{dataset}_{type}_{version}_{mip}_{short_name}_*.nc'
-  output_file: '{project}_{dataset}_{type}_{short_name}'
-  cmor_strict: false
-
 CMIP6:
   cmor_strict: true
   input_dir:
