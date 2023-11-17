@@ -31,6 +31,5 @@ for (i in 1:length(params$input_files)){
     combined_plot <- combined_plot + geom_line(data=df, aes(x = month, y = value)) 
   }
   combined_plot <- combined_plot  + labs(x="month",y="air_temperature/degC",title=metadata1[[j]]$caption)
-  # combined_plots <- grid.arrange(grobs = plots_list, ncol = 1)
   ggsave(paste0(plot_dir,"/var",i,metadata1[[j]]$savefig), plot = combined_plot, width = 8, height = 6, units = "in")
 }
