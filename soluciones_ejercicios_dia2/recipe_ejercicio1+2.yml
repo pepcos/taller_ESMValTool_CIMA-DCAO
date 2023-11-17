@@ -1,0 +1,59 @@
+# ESMValTool
+
+# See https://docs.esmvaltool.org/projects/esmvalcore/en/latest/recipe/overview.html
+# for a description of the recipe format.
+---
+documentation:
+  description: |
+    Example recipe that plots a map and timeseries of temperature.
+
+  title: Recipe that runs an example diagnostic written in Python.
+
+  authors:
+    - cos_josep
+
+
+datasets:
+  - {dataset: BCC-CSM2-MR, project: CMIP6, exp: [historical, ssp585], ensemble: r1i1p1f1, grid: gn}
+
+  - dataset: GISS-E2-1-G
+    ensemble: r1i1p1f2
+    exp:
+    - historical
+    - ssp585
+    grid: gn
+    project: CMIP6
+
+
+preprocessors:
+  seasonality_buenos_aires: &preproc_comun
+    convert_units:
+      units: degrees_C
+    extract_location:
+      location: buenos aires
+      scheme: nearest
+    climate_statistics:
+      operator: mean
+      period: month
+    multi_model_statistics:
+      statistics:
+        - mean
+      span: overlap
+      keep_input_datasets: True
+      ignore_scalar_coords: True
+
+
+diagnostics:
+  point_seasonality:
+    variables:
+      tas:
+        short_name: tas
+        mip: Amon
+        preprocessor: seasonality_buenos_aires
+        timerange: 1991/2020
+        caption: |
+          CMIP6 Buenos Aires 2m-temperature seasonality (1991:2020).  
+        savefig: tas_seasonality_BA.png      
+    scripts:
+      script1:
+        script: /home/pepcos/taller_ESMValTool_CIMA-DCAO/soluciones_ejercicios_dia2/esmval_diagnostic_ejercicios_1-6.py

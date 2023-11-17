@@ -27,9 +27,10 @@ for (i in 1:length(params$input_files)){
     var_group <- metadata1[[j]]$variable_group
     print(paste("NetCDF of dataset", gcm, "in variable group", var_group, ":"))
     print(nc)
-    df <- data.frame(month=ncvar_get(nc,"time"), value = ncvar_get(nc, "tas"))
+    df <- data.frame(month=ncvar_get(nc,"month_number"), value = ncvar_get(nc, "tas"))
     combined_plot <- combined_plot + geom_line(data=df, aes(x = month, y = value)) 
   }
   combined_plot <- combined_plot  + labs(x="month",y="air_temperature/degC",title=metadata1[[j]]$caption)
+  # combined_plots <- grid.arrange(grobs = plots_list, ncol = 1)
   ggsave(paste0(plot_dir,"/var",i,metadata1[[j]]$savefig), plot = combined_plot, width = 8, height = 6, units = "in")
 }

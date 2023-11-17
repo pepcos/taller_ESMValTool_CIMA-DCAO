@@ -1,3 +1,10 @@
+# Cuando queremos poner todos los datasets disponibles de una
+# variable concreta en el apartado "datasets:" de la recipe
+# podemos usar este "filler" que crea un diccionario de python
+# con todos los datasets disponibles y lo guarda en un .yml
+# que luego podemos copiar debajo del apartado "datasets:"
+# de nustra recipe.
+
 import glob
 import os
 import yaml

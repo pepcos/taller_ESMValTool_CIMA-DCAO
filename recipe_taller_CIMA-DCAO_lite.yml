@@ -89,10 +89,10 @@ diagnostics:
           {title}; climatology 2001-2030.
         savefig: tas_mean_global.png
       
-    scripts:
-      script_example_py:
-        script: /home/<usuario>/taller_ESMValTool_CIMA-DCAO/esmval_diagnostic.py
-        var1: var1
-      script_example_R:
-        script: /home/<usuario>/taller_ESMValTool_CIMA-DCAO/esmval_diagnostic.R
+    scripts: null
+      # # script_example_py:
+      # #   script: /home/pepcos/taller_ESMValTool_CIMA-DCAO/esmval_diagnostic.py
+      # #   cmap: Reds
+      # script_example_R:
+      #   script: /home/pepcos/taller_ESMValTool_CIMA-DCAO/esmval_diagnostic.R
     

@@ -84,7 +84,7 @@ save_intermediary_cubes: false
 # Path to custom ``config-developer.yml`` file
 # This can be used to customise project configurations. See
 # ``config-developer.yml`` for an example. Set to ``null`` to use the default.
-config_developer_file: null
+config_developer_file: /home/pepcos/taller_ESMValTool_CIMA-DCAO/.esmvaltool/config-developer.yml
 
 # Use a profiling tool for the diagnostic run --- [false]/true
 # A profiler tells you which functions in your code take most time to run.
