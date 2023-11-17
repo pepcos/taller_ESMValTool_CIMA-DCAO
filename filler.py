@@ -9,7 +9,8 @@ import glob
 import os
 import yaml
 
-root = "/shera/datos/CMIP/CMIP6"
+root = "/datos/CMIP/CMIP6"
+# root = "/shera/datos/CMIP/CMIP6"
 exps = ["historical", "ssp585"]
 
 vars = ["tas"] #, "tos", "pr"]
@@ -56,5 +57,5 @@ for short_name in vars:
             datasets_dict[short_name][alias]["project"] = "CMIP6"
     datasets_recipe_dict[f"datasets_{short_name}"] = list(datasets_dict[short_name].values())
 
-with open("/home/josep.cos/es-esmvaltool/common-tools/projections/recipes/datasets_filled.yml", "w") as f:
+with open("~/datasets_filled.yml", "w") as f:
     yaml.dump(datasets_recipe_dict, f, default_flow_style=False)
