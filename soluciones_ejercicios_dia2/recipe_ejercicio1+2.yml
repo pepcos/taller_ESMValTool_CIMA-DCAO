@@ -56,4 +56,4 @@ diagnostics:
         savefig: tas_seasonality_BA.png      
     scripts:
       script1:
-        script: /home/pepcos/taller_ESMValTool_CIMA-DCAO/soluciones_ejercicios_dia2/esmval_diagnostic_ejercicios_1-6.py
+        script: /home/<usr>/taller_ESMValTool_CIMA-DCAO/soluciones_ejercicios_dia2/esmval_diagnostic_ejercicios_1-6.py
